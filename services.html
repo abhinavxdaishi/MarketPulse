@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+  <meta name="description" content="Explore our free pre-market briefings and daily analytical coverage models at MarketPulse.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .static-page-wrapper {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .static-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .static-title {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .static-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.15rem;
+    }
+    .service-focus-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-focus-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-lg), 0 4px 30px var(--accent-glow);
+    }
+    .service-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .service-header-section h3 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .service-price-sub {
+      font-family: var(--font-primary);
+      font-size: 1.1rem;
+      color: var(--accent-color);
+      font-weight: 700;
+    }
+    .service-desc {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+    .service-features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 24px 0;
+      margin: 10px 0;
+    }
+    @media (min-width: 576px) {
+      .service-features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text-secondary);
+    }
+    .feature-item i {
+      color: var(--accent-color);
+      font-size: 1rem;
+      margin-top: 3px;
+    }
+    .feature-text h5 {
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+    .feature-text p {
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    .service-action-box {
+      text-align: center;
+      padding-top: 10px;
+    }
+    .service-action-box p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+    .service-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    @media (min-width: 576px) {
+      .service-form {
+        flex-direction: row;
+      }
+    }
+    .service-form input {
+      flex-grow: 1;
+      padding: 12px 18px;
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+    }
+    .service-form input:focus {
+      border-color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient Gradient Background Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header Navigation -->
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" id="logo-link">
+        <span class="logo-dot"></span>
+        <span class="logo-text">MARKETPULSE</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="blog.html" class="nav-link">Blogs</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="privacy.html" class="nav-link">Privacy Policy</a>
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light theme">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Open mobile menu">
+        <i class="fas fa-bars menu-open-icon"></i>
+        <i class="fas fa-times menu-close-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="blog.html" class="mobile-nav-link">Blogs</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link active">Services</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="privacy.html" class="mobile-nav-link">Privacy Policy</a>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div class="container static-page-wrapper">
+      <section class="static-header">
+        <h1 class="static-title">Free Market Intelligence</h1>
+        <p class="static-subtitle">Our research philosophy is open and accessible. We charge zero fees for our primary briefings.</p>
+      </section>
+      
+      <!-- Single Focus Free Service Card -->
+      <div class="service-focus-card">
+        <div class="service-badge">Core Coverage</div>
+        <div class="service-header-section">
+          <h3>Daily Pre-Market Briefing</h3>
+          <span class="service-price-sub">100% Free // Zero Licensing Fees</span>
+        </div>
+        
+        <p class="service-desc">We believe that premium financial research shouldn't be locked behind expensive subscription walls. Our primary service is our daily pre-market report, summarizing overnight derivative moves, key stock support parameters, and blockchain index flows.</p>
+        
+        <div class="service-features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-item">
+            <i class="fas fa-chart-line"></i>
+            <div class="feature-text">
+              <h5>Options Order Flow</h5>
+              <p>Critical tracking of options block trades and volatility shifts before open.</p>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="feature-item">
+            <i class="fas fa-clock"></i>
+            <div class="feature-text">
+              <h5>Wall Street Opening Prep</h5>
+              <p>Key resistance and support zones calculated for SPY, QQQ, and active stock symbols.</p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="feature-item">
+            <i class="fas fa-coins"></i>
+            <div class="feature-text">
+              <h5>Decentralized Ledger Insights</h5>
+              <p>Analysis of Bitcoin cycles, miners metrics, and spot flows.</p>
+            </div>
+          </div>
+          <!-- Feature 4 -->
+          <div class="feature-item">
+            <i class="fas fa-globe"></i>
+            <div class="feature-text">
+              <h5>Macro Liquidity Trends</h5>
+              <p>Coverage of inflation prints, yield curves, and bank reserves indicators.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="service-action-box">
+          <form class="service-form" id="service-subscribe-form">
+            <input type="email" id="service-email" placeholder="Enter your trading email" required aria-label="Subscription Email">
+            <button type="submit" class="btn btn-primary" style="padding:12px 24px;">Subscribe Instantly</button>
+          </form>
+          <p>No credit card required. Unsubscribe in one click at any time.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-dot"></span>
+          <span class="logo-text">MARKETPULSE</span>
+        </a>
+        <p class="footer-desc">Professional-grade financial research, charting studies, and market intelligence. Handcrafted with zero-asset overhead.</p>
+        <div class="social-links">
+          <a href="https://github.com/abhinavxdaishi" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/vibevansh.exe/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abhinav-bajpai-7021a4373/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Intelligence</h4>
+        <ul>
+          <li><a href="blog.html">All Coverage</a></li>
+          <li><a href="blog.html?cat=analysis">Market Analysis</a></li>
+          <li><a href="blog.html?cat=strategies">Trading Strategies</a></li>
+          <li><a href="blog.html?cat=crypto">Cryptocurrency</a></li>
+          <li><a href="blog.html?cat=macro">Macro Economy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 MarketPulse Research.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Form action for Service Subscription Form
+    const serviceForm = document.getElementById('service-subscribe-form');
+    if (serviceForm) {
+      serviceForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailVal = document.getElementById('service-email').value;
+        alert(`Welcome aboard! Pre-market briefings will now be delivered daily to ${emailVal}`);
+        serviceForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>

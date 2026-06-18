@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarketPulse</title>
+  <meta name="description" content="Sleek, lightweight stock market research, trading strategies, and macroeconomic analysis.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Gradient Background Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header Navigation -->
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" id="logo-link">
+        <span class="logo-dot"></span>
+        <span class="logo-text">MARKETPULSE</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="blog.html" class="nav-link">Blogs</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="privacy.html" class="nav-link">Privacy Policy</a>
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light theme">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Open mobile menu">
+        <i class="fas fa-bars menu-open-icon"></i>
+        <i class="fas fa-times menu-close-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-links">
+      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="blog.html" class="mobile-nav-link">Blogs</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="privacy.html" class="mobile-nav-link">Privacy Policy</a>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div class="container">
+      
+      <!-- Hero Featured Post -->
+      <section class="hero-section" id="hero-section">
+        <div class="hero-skeleton skeleton"></div>
+      </section>
+
+      <!-- Blog Posts Preview Section -->
+      <section class="posts-section">
+        <div class="section-header">
+          <h2 class="section-title">Latest Intelligence</h2>
+        </div>
+        
+        <div class="posts-grid" id="home-preview-grid">
+          <!-- Dynamically generated preview cards (latest 3 posts) -->
+          <div class="card-skeleton skeleton"></div>
+          <div class="card-skeleton skeleton"></div>
+          <div class="card-skeleton skeleton"></div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+          <a href="blog.html" class="btn btn-primary" style="padding: 12px 30px; font-weight: 600;">Explore All Research Briefings</a>
+        </div>
+      </section>
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-dot"></span>
+          <span class="logo-text">MARKETPULSE</span>
+        </a>
+        <p class="footer-desc">Professional-grade financial research, charting studies, and market intelligence. Handcrafted with zero-asset overhead.</p>
+        <div class="social-links">
+          <a href="https://github.com/abhinavxdaishi" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/vibevansh.exe/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abhinav-bajpai-7021a4373/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Intelligence</h4>
+        <ul>
+          <li><a href="blog.html">All Coverage</a></li>
+          <li><a href="blog.html?cat=analysis">Market Analysis</a></li>
+          <li><a href="blog.html?cat=strategies">Trading Strategies</a></li>
+          <li><a href="blog.html?cat=crypto">Cryptocurrency</a></li>
+          <li><a href="blog.html?cat=macro">Macro Economy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 MarketPulse Research.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL: Full Article Reader -->
+  <div class="modal-backdrop" id="reader-modal">
+    <div class="modal-wrapper">
+      <div class="modal-header-actions">
+        <button class="modal-close" id="btn-close-reader" aria-label="Close article">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-content post-reader-content">
+        <!-- Dynamically injected full article contents -->
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>

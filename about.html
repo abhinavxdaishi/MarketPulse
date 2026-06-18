@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <meta name="description" content="Learn about our mission, editorial standards, and investment research philosophy at MarketPulse.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .static-page-wrapper {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .static-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .static-title {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .static-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.15rem;
+    }
+    .static-content {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+    }
+    .static-content h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--text-primary);
+      margin: 40px 0 16px 0;
+    }
+    .static-content p {
+      margin-bottom: 24px;
+    }
+    .static-content ul {
+      margin-bottom: 24px;
+      padding-left: 20px;
+    }
+    .static-content li {
+      margin-bottom: 12px;
+    }
+    .analyst-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    @media (min-width: 576px) {
+      .analyst-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .analyst-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .analyst-details h4 {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+      color: var(--text-primary);
+    }
+    .analyst-role {
+      font-size: 0.85rem;
+      color: var(--accent-color);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .analyst-bio {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient Gradient Background Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header Navigation -->
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" id="logo-link">
+        <span class="logo-dot"></span>
+        <span class="logo-text">MARKETPULSE</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="blog.html" class="nav-link">Blogs</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="privacy.html" class="nav-link">Privacy Policy</a>
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light theme">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Open mobile menu">
+        <i class="fas fa-bars menu-open-icon"></i>
+        <i class="fas fa-times menu-close-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="blog.html" class="mobile-nav-link">Blogs</a>
+      <a href="about.html" class="mobile-nav-link active">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="privacy.html" class="mobile-nav-link">Privacy Policy</a>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div class="container static-page-wrapper">
+      <section class="static-header">
+        <h1 class="static-title">Democratizing Financial Research</h1>
+        <p class="static-subtitle">Unbiased, analytical stock intelligence with zero compromise on visual quality.</p>
+      </section>
+      
+      <article class="static-content">
+        <p>MarketPulse was founded in 2026 with a clear conviction: retail traders and long-term investors deserve the same analytical precision and structural market insights that institutional capital relies on. We strip away the noise of financial social media, focusing on order books, math, data models, and macroeconomic flows.</p>
+        
+        <h3>Our Research Creed</h3>
+        <p>We believe that capital markets are not random walks, nor are they systems governed by sentiment alone. They are structural systems driven by liquidity, collateral requirements, leverage parameters, and monetary flow rates. Our publishing guidelines focus on:</p>
+        <ul>
+          <li><strong>Data-First Assertions:</strong> Every analysis starts with order flow, metrics, or technical thresholds, not sentiment.</li>
+          <li><strong>Zero Binary Bloat:</strong> The website loads with zero weight on external imagery, leveraging fast inline vector models for instant updates.</li>
+          <li><strong>Educational Empowerment:</strong> We don't offer stock tips; we break down market models so you learn to read the charts yourself.</li>
+        </ul>
+
+        <h3>Our Advisory Analysts</h3>
+        <p>Our briefings are curated by a tight circle of independent researchers who specialize in derivative structures, charting, macro liquidity, and decentralized ledgers.</p>
+        
+        <div class="analyst-grid">
+          <div class="analyst-card">
+            <div class="text-avatar">AS</div>
+            <div class="analyst-details">
+              <h4>Aria Sterling</h4>
+              <div class="analyst-role">Chief Market Analyst</div>
+              <p class="analyst-bio">Formerly a quant developer at major funds, specializing in order book dynamics and short squeeze models.</p>
+            </div>
+          </div>
+          <div class="analyst-card">
+            <div class="text-avatar">JV</div>
+            <div class="analyst-details">
+              <h4>Julian Veldt</h4>
+              <div class="analyst-role">Lead Technical Strategist</div>
+              <p class="analyst-bio">Experienced technician focusing on high-volume reversals and multi-timeframe candlestick patterns.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-dot"></span>
+          <span class="logo-text">MARKETPULSE</span>
+        </a>
+        <p class="footer-desc">Professional-grade financial research, charting studies, and market intelligence. Handcrafted with zero-asset overhead.</p>
+        <div class="social-links">
+          <a href="https://github.com/abhinavxdaishi" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/vibevansh.exe/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abhinav-bajpai-7021a4373/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Intelligence</h4>
+        <ul>
+          <li><a href="blog.html">All Coverage</a></li>
+          <li><a href="blog.html?cat=analysis">Market Analysis</a></li>
+          <li><a href="blog.html?cat=strategies">Trading Strategies</a></li>
+          <li><a href="blog.html?cat=crypto">Cryptocurrency</a></li>
+          <li><a href="blog.html?cat=macro">Macro Economy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 MarketPulse Research.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

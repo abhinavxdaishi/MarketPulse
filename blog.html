@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Briefings Feed </title>
+  <meta name="description" content="Search and filter our database of professional-grade financial briefings and trade strategies.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-page-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .blog-page-title {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .blog-page-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+    /* Centered Search Bar styled inside main body */
+    .body-search-wrapper {
+      max-width: 480px;
+      margin: 0 auto 40px auto;
+      position: relative;
+    }
+    .body-search-wrapper input {
+      width: 100%;
+      padding: 12px 16px 12px 42px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 30px;
+      color: var(--text-primary);
+      transition: var(--transition-smooth);
+      font-size: 0.95rem;
+    }
+    .body-search-wrapper input:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+    .body-search-wrapper i {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient Gradient Background Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header Navigation (No Search Bar) -->
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" id="logo-link">
+        <span class="logo-dot"></span>
+        <span class="logo-text">MARKETPULSE</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="blog.html" class="nav-link active">Blogs</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="privacy.html" class="nav-link">Privacy Policy</a>
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light theme">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Open mobile menu">
+        <i class="fas fa-bars menu-open-icon"></i>
+        <i class="fas fa-times menu-close-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation (No Search) -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="blog.html" class="mobile-nav-link active">Blogs</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="privacy.html" class="mobile-nav-link">Privacy Policy</a>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div class="container">
+      <section class="blog-page-header">
+        <h1 class="blog-page-title">Market Intelligence Feed</h1>
+        <p class="blog-page-subtitle">Tactical briefs, macro summaries, and options insights.</p>
+      </section>
+      
+      <!-- Body Search Bar -->
+      <div class="body-search-wrapper">
+        <i class="fas fa-search"></i>
+        <input type="text" id="search-input" placeholder="Search tickers, strategy, analysis..." aria-label="Search articles">
+      </div>
+
+      <!-- Filter / Categories Section -->
+      <section class="filter-section">
+        <div class="filter-wrapper">
+          <button class="filter-chip active" data-category="all">All Coverage</button>
+          <button class="filter-chip" data-category="analysis">Market Analysis</button>
+          <button class="filter-chip" data-category="strategies">Trading Strategies</button>
+          <button class="filter-chip" data-category="crypto">Cryptocurrency</button>
+          <button class="filter-chip" data-category="macro">Macro Economy</button>
+        </div>
+      </section>
+
+      <!-- Blog Posts Grid -->
+      <section class="posts-section">
+        <div class="section-header">
+          <h2 class="section-title" id="posts-title">Latest Intelligence</h2>
+          <span class="posts-count" id="posts-count">Showing 0 articles</span>
+        </div>
+        
+        <div class="posts-grid" id="posts-grid">
+          <div class="card-skeleton skeleton"></div>
+          <div class="card-skeleton skeleton"></div>
+          <div class="card-skeleton skeleton"></div>
+        </div>
+        
+        <!-- Empty State -->
+        <div class="empty-state hidden" id="empty-state">
+          <i class="fas fa-chart-line empty-icon"></i>
+          <h3>No research found</h3>
+          <p>We couldn't find any articles matching your search criteria. Try a different term or category.</p>
+          <button class="btn btn-secondary" id="btn-clear-search">Reset Search</button>
+        </div>
+      </section>
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-dot"></span>
+          <span class="logo-text">MARKETPULSE</span>
+        </a>
+        <p class="footer-desc">Professional-grade financial research, charting studies, and market intelligence. Handcrafted with zero-asset overhead.</p>
+        <div class="social-links">
+          <a href="https://github.com/abhinavxdaishi" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/vibevansh.exe/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abhinav-bajpai-7021a4373/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Intelligence</h4>
+        <ul>
+          <li><a href="blog.html">All Coverage</a></li>
+          <li><a href="blog.html?cat=analysis">Market Analysis</a></li>
+          <li><a href="blog.html?cat=strategies">Trading Strategies</a></li>
+          <li><a href="blog.html?cat=crypto">Cryptocurrency</a></li>
+          <li><a href="blog.html?cat=macro">Macro Economy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 MarketPulse Research.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL: Full Article Reader -->
+  <div class="modal-backdrop" id="reader-modal">
+    <div class="modal-wrapper">
+      <div class="modal-header-actions">
+        <button class="modal-close" id="btn-close-reader" aria-label="Close article">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-content post-reader-content">
+        <!-- Dynamically injected full article contents -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

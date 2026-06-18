@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us </title>
+  <meta name="description" content="Get in touch with our research team, submit feedback, or inquire about institutional coverage options.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .static-page-wrapper {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .static-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .static-title {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .static-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.15rem;
+    }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 768px) {
+      .contact-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .contact-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-form .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .contact-form label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-secondary);
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      transition: var(--transition-fast);
+      color: var(--text-primary);
+    }
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+    .contact-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    .contact-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .info-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .info-icon-box {
+      width: 44px;
+      height: 44px;
+      background: var(--border-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+    .info-details h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: var(--text-primary);
+    }
+    .info-details p, .info-details a {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .info-details a:hover {
+      color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient Gradient Background Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header Navigation -->
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" id="logo-link">
+        <span class="logo-dot"></span>
+        <span class="logo-text">MARKETPULSE</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="blog.html" class="nav-link">Blogs</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="privacy.html" class="nav-link">Privacy Policy</a>
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light theme">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Open mobile menu">
+        <i class="fas fa-bars menu-open-icon"></i>
+        <i class="fas fa-times menu-close-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="blog.html" class="mobile-nav-link">Blogs</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="contact.html" class="mobile-nav-link active">Contact</a>
+      <a href="privacy.html" class="mobile-nav-link">Privacy Policy</a>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div class="container static-page-wrapper">
+      <section class="static-header">
+        <h1 class="static-title">Initiate Contact</h1>
+        <p class="static-subtitle">Questions regarding our charts or custom commissions? Reach out below.</p>
+      </section>
+      
+      <div class="contact-layout">
+        <!-- Contact Form Card -->
+        <div class="contact-card">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" placeholder="John Doe" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" placeholder="john@domain.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-reason">Topic of Inquiry</label>
+              <select id="contact-reason" required>
+                <option value="research">Research Feedback</option>
+                <option value="custom">Custom Ticker Report</option>
+                <option value="support">Subscription Support</option>
+                <option value="press">Press & Media</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-message">Inquiry Details</label>
+              <textarea id="contact-message" placeholder="Provide context about your query, tickers of interest, or options questions..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block" style="padding:12px;">Send Inquiry</button>
+          </form>
+        </div>
+        
+        <!-- Contact Info Cards -->
+        <div class="contact-info-list">
+          <div class="info-item">
+            <div class="info-icon-box">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-details">
+              <h4>Electronic Mail</h4>
+              <p><a href="mailto:research@marketpulse.com">research@marketpulse.com</a></p>
+              <p>Response time typically under 12 hours.</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon-box">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-details">
+              <h4>Global Research Office</h4>
+              <p>MarketPulse Intelligence Labs<br>40 Wall Street, 28th Floor<br>New York, NY 10005</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon-box">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="info-details">
+              <h4>Market Hours Alignment</h4>
+              <p>Monday – Friday<br>8:00 AM – 6:00 PM IST</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-dot"></span>
+          <span class="logo-text">MARKETPULSE</span>
+        </a>
+        <p class="footer-desc">Professional-grade financial research, charting studies, and market intelligence. Handcrafted with zero-asset overhead.</p>
+        <div class="social-links">
+         <a href="https://github.com/abhinavxdaishi" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/vibevansh.exe/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abhinav-bajpai-7021a4373/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Intelligence</h4>
+        <ul>
+          <li><a href="blog.html">All Coverage</a></li>
+          <li><a href="blog.html?cat=analysis">Market Analysis</a></li>
+          <li><a href="blog.html?cat=strategies">Trading Strategies</a></li>
+          <li><a href="blog.html?cat=crypto">Cryptocurrency</a></li>
+          <li><a href="blog.html?cat=macro">Macro Economy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 MarketPulse Research. All market data is delayed by 15 minutes. </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Specific Form Action for Contact Form
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameVal = document.getElementById('contact-name').value;
+        alert(`Thank you, ${nameVal}! Your inquiry has been sent to our analyst desk. We will review your ticker interest shortly.`);
+        contactForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>
